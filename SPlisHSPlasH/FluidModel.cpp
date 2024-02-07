@@ -39,10 +39,12 @@ FluidModel::FluidModel() :
 	m_particleId(),
 	m_objectId(),
 	m_objectId0(),
+	m_l(),
 	m_particleState()
 {		
 	m_density0 = 1000.0;
 	m_pointSetIndex = 0;
+	m_levels = 0; 
 
 	m_emitterSystem = new EmitterSystem(this);
 	m_viscosity = nullptr;
@@ -210,6 +212,7 @@ void FluidModel::reset()
 		getVelocity(i) = getVelocity0(i);
 		getAcceleration(i).setZero();
 		m_objectId[i] = m_objectId0[i];
+		m_l[i] = 0;
 		m_density[i] = 0.0;
 		m_particleId[i] = i;
 		m_particleState[i] = ParticleState::Active;
@@ -268,6 +271,7 @@ void FluidModel::resizeFluidParticles(const unsigned int newSize)
 	m_particleId.resize(newSize);
 	m_objectId.resize(newSize);
 	m_objectId0.resize(newSize);
+	m_l.resize(newSize);
 	m_particleState.resize(newSize, ParticleState::Active);
 }
 
@@ -283,6 +287,7 @@ void FluidModel::releaseFluidParticles()
 	m_particleId.clear();
 	m_objectId.clear();
 	m_objectId0.clear();
+	m_l.clear();
 	m_particleState.clear();
 }
 
@@ -308,6 +313,7 @@ void FluidModel::initModel(const std::string &id, const unsigned int nFluidParti
 			m_particleId[i] = i;
 			m_objectId[i] = fluidObjectIds[i];
 			m_objectId0[i] = fluidObjectIds[i];
+			m_l[i] = 0;
 			if (m_particleState[i] != ParticleState::Fixed)
 				m_particleState[i] = ParticleState::Active;
 		}
@@ -347,6 +353,7 @@ void FluidModel::performNeighborhoodSearchSort()
 	d.sort_field(&m_density[0]);
 	d.sort_field(&m_particleId[0]);
 	d.sort_field(&m_objectId[0]);
+	d.sort_field(&m_l[0]);
 	d.sort_field(&m_particleState[0]);
 
 	if (m_viscosity)

@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/CMakeFiles/Ext_Discregrid"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/CMakeFiles/Ext_Discregrid.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/CMakeFiles/Ext_Discregrid-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-build.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-download.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-install.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Release/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Ext_Discregrid"
+		],
+		"name" : "Ext_Discregrid"
+	}
+}

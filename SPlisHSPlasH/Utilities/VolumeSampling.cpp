@@ -101,6 +101,7 @@ void VolumeSampling::sampleMesh(const unsigned int numVertices, const Vector3r *
  		counter_y = 0;
  	}
 // 	LOG_INFO << "100%";
+    // TODO: Add a 3rd sample mode here. 
 
 	delete sdf;
 }

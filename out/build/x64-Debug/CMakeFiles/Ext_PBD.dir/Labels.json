@@ -1,0 +1,91 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/CMakeFiles/Ext_PBD"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/CMakeFiles/Ext_PBD.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/CMakeFiles/Ext_PBD-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-build.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-download.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-install.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/PositionBasedDynamics/src/Ext_PBD-stamp/Ext_PBD-update.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/CMakeFiles/Ext_Discregrid-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/CMakeFiles/Ext_GenericParameters-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-build.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-download.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-install.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/Discregrid/src/Ext_Discregrid-stamp/Ext_Discregrid-update.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-build.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-download.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-install.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug/extern/GenericParameters/src/Ext_GenericParameters-stamp/Ext_GenericParameters-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Ext_PBD"
+		],
+		"name" : "Ext_PBD"
+	}
+}

@@ -119,8 +119,11 @@ namespace SPH
 			std::vector<unsigned int> m_particleId;
 			std::vector<unsigned int> m_objectId;
 			std::vector<unsigned int> m_objectId0;
+			std::vector<unsigned int> m_l;			//level
 			std::vector<ParticleState> m_particleState;
 			Real m_V;
+			unsigned int m_levels; // might need to make a public variable and process at init
+			
 
 #ifdef USE_PERFORMANCE_OPTIMIZATION
 			std::vector<Vector3f8, Eigen::aligned_allocator<Vector3f8>> m_precomp_V_gradW;
@@ -373,6 +376,29 @@ namespace SPH
 				m_objectId[i] = val;
 			}
 
+			FORCE_INLINE const unsigned int& getParticleLevel(const unsigned int i) const
+			{
+				return m_l[i];
+			}
+
+			FORCE_INLINE void setParticleLevel(const unsigned int i, const unsigned int val)
+			{
+				m_l[i] =val;
+			}
+
+			FORCE_INLINE const unsigned int& getLevels() const
+			{
+				return m_levels;
+			}
+			FORCE_INLINE unsigned int& getLevels()
+			{
+				return m_levels;
+			}
+
+			FORCE_INLINE void setLevels(const unsigned int val)
+			{
+				m_levels = val;
+			}
 			FORCE_INLINE const ParticleState& getParticleState(const unsigned int i) const
 			{
 				return m_particleState[i];

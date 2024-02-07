@@ -1,0 +1,722 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						4,
+						5,
+						6,
+						8,
+						9,
+						10,
+						11,
+						12,
+						20,
+						21
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "extern/zlib",
+					"jsonFile" : "directory-extern.zlib-Debug-31608d94c63bbbfdbbe5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern/zlib",
+					"targetIndexes" : 
+					[
+						29
+					]
+				},
+				{
+					"build" : "extern/partio",
+					"childIndexes" : 
+					[
+						3
+					],
+					"jsonFile" : "directory-extern.partio-Debug-ba699d19710bb65fd608.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern/partio"
+				},
+				{
+					"build" : "extern/partio/src/lib",
+					"jsonFile" : "directory-extern.partio.src.lib-Debug-54d7308c70531f46ebc3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "extern/partio/src/lib",
+					"targetIndexes" : 
+					[
+						25
+					]
+				},
+				{
+					"build" : "extern/md5",
+					"jsonFile" : "directory-extern.md5-Debug-d952b740e4e07dd0de07.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern/md5",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "extern/tinyexpr",
+					"jsonFile" : "directory-extern.tinyexpr-Debug-0bbb11552e08f112a322.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern/tinyexpr",
+					"targetIndexes" : 
+					[
+						27
+					]
+				},
+				{
+					"build" : "extern/glfw",
+					"childIndexes" : 
+					[
+						7
+					],
+					"jsonFile" : "directory-extern.glfw-Debug-be28dadd70a35a0f762f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "extern/glfw"
+				},
+				{
+					"build" : "extern/glfw/src",
+					"jsonFile" : "directory-extern.glfw.src-Debug-431dc4d4bcbde19be476.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 6,
+					"projectIndex" : 1,
+					"source" : "extern/glfw/src",
+					"targetIndexes" : 
+					[
+						22,
+						28
+					]
+				},
+				{
+					"build" : "extern/imgui",
+					"jsonFile" : "directory-extern.imgui-Debug-8a98c2b1876fee1ddb47.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern/imgui",
+					"targetIndexes" : 
+					[
+						23
+					]
+				},
+				{
+					"build" : "extern/nfd",
+					"jsonFile" : "directory-extern.nfd-Debug-cca4dac8d11cd7f4e45d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "extern/nfd",
+					"targetIndexes" : 
+					[
+						24
+					]
+				},
+				{
+					"build" : "SPlisHSPlasH",
+					"jsonFile" : "directory-SPlisHSPlasH-Debug-70839d9d20bcb0c87a12.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "SPlisHSPlasH",
+					"targetIndexes" : 
+					[
+						17
+					]
+				},
+				{
+					"build" : "Utilities",
+					"jsonFile" : "directory-Utilities-Debug-5e3bd9e4a1e467ac0e18.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Utilities",
+					"targetIndexes" : 
+					[
+						20
+					]
+				},
+				{
+					"build" : "Tools",
+					"childIndexes" : 
+					[
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					],
+					"jsonFile" : "directory-Tools-Debug-8d97cb24eec6417dce43.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Tools"
+				},
+				{
+					"build" : "Tools/PartioViewer",
+					"jsonFile" : "directory-Tools.PartioViewer-Debug-da53a1f3629a0a567fff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/PartioViewer",
+					"targetIndexes" : 
+					[
+						14
+					]
+				},
+				{
+					"build" : "Tools/FoamGenerator",
+					"jsonFile" : "directory-Tools.FoamGenerator-Debug-e313688e9bb4e2cd867d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/FoamGenerator",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "Tools/SurfaceSampling",
+					"jsonFile" : "directory-Tools.SurfaceSampling-Debug-c2ade93bc53daadd0aab.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/SurfaceSampling",
+					"targetIndexes" : 
+					[
+						19
+					]
+				},
+				{
+					"build" : "Tools/VolumeSampling",
+					"jsonFile" : "directory-Tools.VolumeSampling-Debug-65ed8962c57ca7a3d274.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/VolumeSampling",
+					"targetIndexes" : 
+					[
+						21
+					]
+				},
+				{
+					"build" : "Tools/partio2vtk",
+					"jsonFile" : "directory-Tools.partio2vtk-Debug-d940b01132727ceb1f4f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/partio2vtk",
+					"targetIndexes" : 
+					[
+						26
+					]
+				},
+				{
+					"build" : "Tools/MeshSkinning",
+					"jsonFile" : "directory-Tools.MeshSkinning-Debug-10687c11e2f31c8c11c9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/MeshSkinning",
+					"targetIndexes" : 
+					[
+						12
+					]
+				},
+				{
+					"build" : "Tools/ParameterParser",
+					"jsonFile" : "directory-Tools.ParameterParser-Debug-19ca62cf6b6566df58d4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 12,
+					"projectIndex" : 0,
+					"source" : "Tools/ParameterParser",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "Simulator",
+					"jsonFile" : "directory-Simulator-Debug-e58182db3e407e557bc5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Simulator",
+					"targetIndexes" : 
+					[
+						16,
+						18
+					]
+				},
+				{
+					"build" : "Tests",
+					"childIndexes" : 
+					[
+						22,
+						23,
+						24
+					],
+					"jsonFile" : "directory-Tests-Debug-4930e65484166898b195.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Tests"
+				},
+				{
+					"build" : "Tests/Kernel",
+					"jsonFile" : "directory-Tests.Kernel-Debug-87b791f40215f0ae7e0f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 0,
+					"source" : "Tests/Kernel",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "Tests/ReadWriteState",
+					"jsonFile" : "directory-Tests.ReadWriteState-Debug-042d3ab908ea8bde2332.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 0,
+					"source" : "Tests/ReadWriteState",
+					"targetIndexes" : 
+					[
+						15
+					]
+				},
+				{
+					"build" : "Tests/AVX",
+					"jsonFile" : "directory-Tests.AVX-Debug-9299b3bba45753751192.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 21,
+					"projectIndex" : 0,
+					"source" : "Tests/AVX",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					],
+					"name" : "SPlisHSPlasH",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						23,
+						24,
+						25,
+						26,
+						27,
+						29
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6,
+						7
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						22,
+						28
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 24,
+					"id" : "AVXTests::@1953c02a01ae7b05fe8d",
+					"jsonFile" : "target-AVXTests-Debug-d5336a032b50ce0386d7.json",
+					"name" : "AVXTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CopyEmitterModels::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyEmitterModels-Debug-1f389717773da7cb7fd6.json",
+					"name" : "CopyEmitterModels",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CopyImguiFonts::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyImguiFonts-Debug-77618fa58f1d65596a09.json",
+					"name" : "CopyImguiFonts",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CopyPBDShaders::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyPBDShaders-Debug-45702f016e7361641cc9.json",
+					"name" : "CopyPBDShaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CopySPlisHSPlasHShaders::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopySPlisHSPlasHShaders-Debug-2cd344c1b454fde6447e.json",
+					"name" : "CopySPlisHSPlasHShaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ext_Discregrid::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ext_Discregrid-Debug-a03152aa816428c7e9a8.json",
+					"name" : "Ext_Discregrid",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ext_GenericParameters::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ext_GenericParameters-Debug-0d555d3877fb42a7a8bf.json",
+					"name" : "Ext_GenericParameters",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ext_NeighborhoodSearch::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ext_NeighborhoodSearch-Debug-60e99350bd3ab900e36f.json",
+					"name" : "Ext_NeighborhoodSearch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Ext_PBD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Ext_PBD-Debug-2c5f335ecf9d75bade24.json",
+					"name" : "Ext_PBD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "FoamGenerator::@c8b87eaefb96417524e9",
+					"jsonFile" : "target-FoamGenerator-Debug-1b379ff0707ca51a83a9.json",
+					"name" : "FoamGenerator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 22,
+					"id" : "KernelTests::@90763eceb699b072dc9f",
+					"jsonFile" : "target-KernelTests-Debug-c71ac364bcb6c3e2f9d6.json",
+					"name" : "KernelTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "MD5::@2560cb1460e292f3cc50",
+					"jsonFile" : "target-MD5-Debug-956f3fd57067aba455f5.json",
+					"name" : "MD5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 18,
+					"id" : "MeshSkinning::@a3b1058710f0ce9c955d",
+					"jsonFile" : "target-MeshSkinning-Debug-252526c42e4f52b39791.json",
+					"name" : "MeshSkinning",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 19,
+					"id" : "ParameterParser::@20bb762351349944ea7e",
+					"jsonFile" : "target-ParameterParser-Debug-9c222a81ea7c8fbc84fc.json",
+					"name" : "ParameterParser",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 13,
+					"id" : "PartioViewer::@9e5b6454cc314224efde",
+					"jsonFile" : "target-PartioViewer-Debug-ccd5a2ec30d0f540850f.json",
+					"name" : "PartioViewer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 23,
+					"id" : "ReadWriteStateTests::@97f37687e51fcf196518",
+					"jsonFile" : "target-ReadWriteStateTests-Debug-fa7eee7dc81e7c9082f9.json",
+					"name" : "ReadWriteStateTests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "SPHSimulator::@a346c7eb8af351c25daa",
+					"jsonFile" : "target-SPHSimulator-Debug-23fe3bcef8d6ecc15f8f.json",
+					"name" : "SPHSimulator",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "SPlisHSPlasH::@d71f16fc7c1f923e11bb",
+					"jsonFile" : "target-SPlisHSPlasH-Debug-14ec2926e36a146ac47a.json",
+					"name" : "SPlisHSPlasH",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 20,
+					"id" : "SimulatorBase::@a346c7eb8af351c25daa",
+					"jsonFile" : "target-SimulatorBase-Debug-ba55d7502942ba8f79fe.json",
+					"name" : "SimulatorBase",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 15,
+					"id" : "SurfaceSampling::@f7e6ea2d722cdcc0e2b3",
+					"jsonFile" : "target-SurfaceSampling-Debug-9e2669d0e14fd310e348.json",
+					"name" : "SurfaceSampling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "Utilities::@e5cfef13bd836c54df78",
+					"jsonFile" : "target-Utilities-Debug-16e4fb205c1778ceb906.json",
+					"name" : "Utilities",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 16,
+					"id" : "VolumeSampling::@f1cdb1415865f3026b31",
+					"jsonFile" : "target-VolumeSampling-Debug-5559c77d600f3d537071.json",
+					"name" : "VolumeSampling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "glfw::@81d610105217ee077306",
+					"jsonFile" : "target-glfw-Debug-59e4730542e58fe55dbc.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "imgui::@585051bfad45d3748f65",
+					"jsonFile" : "target-imgui-Debug-06d6b2dd1b9111f66e66.json",
+					"name" : "imgui",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "nfd::@956ce13ad7c25c8dc7ca",
+					"jsonFile" : "target-nfd-Debug-6eb1b150ca1c7819570a.json",
+					"name" : "nfd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "partio::@645cfd926eb706b0edf6",
+					"jsonFile" : "target-partio-Debug-5e1df6c5098a4ad4fcd0.json",
+					"name" : "partio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 17,
+					"id" : "partio2vtk::@ad860044b5efd6ddf3f5",
+					"jsonFile" : "target-partio2vtk-Debug-1b52e3f46dc9b121987f.json",
+					"name" : "partio2vtk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "tinyexpr::@ee5a681352f7c45917be",
+					"jsonFile" : "target-tinyexpr-Debug-4b3454a1a618cd469ef5.json",
+					"name" : "tinyexpr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "update_mappings::@81d610105217ee077306",
+					"jsonFile" : "target-update_mappings-Debug-6e3a08c5f61ec9dc4541.json",
+					"name" : "update_mappings",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "zlib::@0fa9e3bb29f8c63476b0",
+					"jsonFile" : "target-zlib-Debug-b2e5f6e1ed6193337942.json",
+					"name" : "zlib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Trey/source/repos/SPlisHSPlasH/out/build/x64-Debug",
+		"source" : "C:/Users/Trey/source/repos/SPlisHSPlasH"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
