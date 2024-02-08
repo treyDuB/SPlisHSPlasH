@@ -123,6 +123,7 @@ namespace SPH
 			std::vector<ParticleState> m_particleState;
 			Real m_V;
 			unsigned int m_levels; // might need to make a public variable and process at init
+			unsigned int m_level0;
 			
 
 #ifdef USE_PERFORMANCE_OPTIMIZATION
@@ -399,6 +400,21 @@ namespace SPH
 			{
 				m_levels = val;
 			}
+
+			FORCE_INLINE const unsigned int& getLevel0() const
+			{
+				return m_level0;
+			}
+			FORCE_INLINE unsigned int& getLevel0()
+			{
+				return m_level0;
+			}
+
+			FORCE_INLINE void setLevel0(const unsigned int val)
+			{
+				m_level0 = val;
+			}
+
 			FORCE_INLINE const ParticleState& getParticleState(const unsigned int i) const
 			{
 				return m_particleState[i];

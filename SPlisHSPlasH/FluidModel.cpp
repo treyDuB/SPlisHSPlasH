@@ -40,11 +40,14 @@ FluidModel::FluidModel() :
 	m_objectId(),
 	m_objectId0(),
 	m_l(),
+	m_levels(),
+	m_level0(),
 	m_particleState()
 {		
 	m_density0 = 1000.0;
 	m_pointSetIndex = 0;
 	m_levels = 0; 
+	m_level0 = 0;
 
 	m_emitterSystem = new EmitterSystem(this);
 	m_viscosity = nullptr;
@@ -71,6 +74,8 @@ FluidModel::FluidModel() :
 	addField({ "position0", FieldType::Vector3, [&](const unsigned int i) -> Real* { return &getPosition0(i)[0]; } });
 	addField({ "velocity", FieldType::Vector3, [&](const unsigned int i) -> Real* { return &getVelocity(i)[0]; }, true });
 	addField({ "density", FieldType::Scalar, [&](const unsigned int i) -> Real* { return &getDensity(i); }, false });
+	addField({ "levels", FieldType::UInt, [&](const unsigned int i) -> unsigned int* { return &getLevels(); }, true });
+	addField({ "level0", FieldType::UInt, [&](const unsigned int i) -> unsigned int* { return &getLevel0(); }, true });
 }
 
 FluidModel::~FluidModel(void)
@@ -82,6 +87,8 @@ FluidModel::~FluidModel(void)
 	removeFieldByName("position0");
 	removeFieldByName("velocity");
 	removeFieldByName("density");
+	removeFieldByName("levels");
+	removeFieldByName("level0");
 
 	delete m_xsph;
 	delete m_emitterSystem;
@@ -212,7 +219,7 @@ void FluidModel::reset()
 		getVelocity(i) = getVelocity0(i);
 		getAcceleration(i).setZero();
 		m_objectId[i] = m_objectId0[i];
-		m_l[i] = 0;
+		m_l[i] = m_level0;
 		m_density[i] = 0.0;
 		m_particleId[i] = i;
 		m_particleState[i] = ParticleState::Active;
@@ -313,7 +320,7 @@ void FluidModel::initModel(const std::string &id, const unsigned int nFluidParti
 			m_particleId[i] = i;
 			m_objectId[i] = fluidObjectIds[i];
 			m_objectId0[i] = fluidObjectIds[i];
-			m_l[i] = 0;
+			m_l[i] = m_level0;
 			if (m_particleState[i] != ParticleState::Fixed)
 				m_particleState[i] = ParticleState::Active;
 		}
