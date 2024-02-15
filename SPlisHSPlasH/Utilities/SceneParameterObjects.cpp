@@ -17,6 +17,8 @@ int FluidBlockParameterObject::FLUID_BLOCK_VISMESH = -1;
 int FluidBlockParameterObject::FLUID_BLOCK_MODE = -1;
 int FluidBlockParameterObject::FLUID_BLOCK_INITIAL_VEL = -1;
 int FluidBlockParameterObject::FLUID_BLOCK_INITIAL_ANGVEL = -1;
+int FluidBlockParameterObject::FLUID_BLOCK_LEVEL0 = -1;
+
 
 void FluidBlockParameterObject::initParameters()
 {
@@ -55,6 +57,10 @@ void FluidBlockParameterObject::initParameters()
 	FLUID_BLOCK_INITIAL_ANGVEL = createVectorParameter("initialAngularVelocity", "Initial angular velocity", 3u, initialAngularVelocity.data());
 	setGroup(FLUID_BLOCK_INITIAL_ANGVEL, "FluidBlock");
 	setDescription(FLUID_BLOCK_INITIAL_ANGVEL, "The initial angular velocity of the block.");
+
+	FLUID_BLOCK_LEVEL0 = createNumericParameter<unsigned int>("level0", "Initial level", &level0);
+	setGroup(FLUID_BLOCK_LEVEL0, "FluidBlock");
+	setDescription(FLUID_BLOCK_LEVEL0, "The level that each particle should have");
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -259,6 +265,8 @@ int MaterialParameterObject::MATERIAL_MAX_EMITTER_PARTICLES = -1;
 int MaterialParameterObject::MATERIAL_EMITTER_REUSE = -1;
 int MaterialParameterObject::MATERIAL_EMITTER_BOX_MIN = -1;
 int MaterialParameterObject::MATERIAL_EMITTER_BOX_MAX = -1;
+int MaterialParameterObject::MATERIAL_LEVELS = -1;
+int MaterialParameterObject::MATERIAL_LEVEL_0 = -1;
 
 void MaterialParameterObject::initParameters()
 {
@@ -297,6 +305,14 @@ void MaterialParameterObject::initParameters()
 	MATERIAL_EMITTER_BOX_MAX = createVectorParameter("emitterBoxMax", "Emitter box max.", 3u, emitterBoxMax.data());
 	setGroup(MATERIAL_EMITTER_BOX_MAX, "Material");
 	setDescription(MATERIAL_EMITTER_BOX_MAX, "Maximum coordinates of an axis-aligned box (used in combination with emitterReuseParticles).");
+
+	MATERIAL_LEVELS = createNumericParameter<unsigned int>("levels", "Number of Levels", &levels);
+	setGroup(MATERIAL_LEVELS, "Material");
+	setDescription(MATERIAL_LEVELS, "The meximum level that a particle can go to.");
+
+	MATERIAL_LEVEL_0 = createNumericParameter<unsigned int>("level0", "Starting Level", &level0);
+	setGroup(MATERIAL_LEVEL_0, "Material");
+	setDescription(MATERIAL_LEVEL_0, "The startying level of the particle.");
 }
 
 //////////////////////////////////////////////////////////////////////////

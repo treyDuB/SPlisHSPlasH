@@ -150,6 +150,8 @@ namespace SPH
 			std::function<void()> m_viscosityMethodChanged;
 			std::function<void()> m_vorticityMethodChanged;
 			std::function<void()> m_elasticityMethodChanged;
+			std::function<void()> m_levelsMethodChanged;
+			std::function<void()> m_level0MethodChanged;
 
 			Real m_density0;
 			unsigned int m_pointSetIndex;
@@ -192,7 +194,7 @@ namespace SPH
 
 			void performNeighborhoodSearchSort();
 
-			void initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles);
+			void initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles, unsigned int levels = 0, unsigned int level0 = 0);
 			
 			const unsigned int numParticles() const { return static_cast<unsigned int>(m_masses.size()); }
 			unsigned int numActiveParticles() const;
@@ -230,6 +232,7 @@ namespace SPH
 			void setViscosityMethodChangedCallback(std::function<void()> const& callBackFct);
 			void setVorticityMethodChangedCallback(std::function<void()> const& callBackFct);
 			void setElasticityMethodChangedCallback(std::function<void()> const& callBackFct);
+		
 
 			void computeSurfaceTension();
 			void computeViscosity();

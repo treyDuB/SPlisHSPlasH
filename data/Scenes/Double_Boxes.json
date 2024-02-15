@@ -5,7 +5,7 @@
 		"numberOfStepsPerRenderUpdate": 4,
 		"density0": 1000, 
 		"simulationMethod": 2,
-		"gravitation": [0,0,0], 
+		"gravitation": [0,-9.81,0], 
 		"timeStepSize": 0.005,
 		"cflMethod": 1, 
 		"cflFactor": 1,
@@ -24,22 +24,23 @@
 	"Materials": [
 		{
 			"id": "Fluid1",
-			"colorField": "velocity",
+			"colorField": "object_id",
 			"surfaceTension": 0.2,
 			"surfaceTensionMethod": 0,
 			"viscosity": 0.01,
 			"viscosityMethod": 1,
-			"levels": 1,
+			"levels": 2,
       "level0": 0
 		},
 		{
 			"id": "Fluid2",
+			"colorField": "object_id",
 			"surfaceTension": 0.2,
 			"surfaceTensionMethod": 0,
 			"viscosity": 0.01,
 			"viscosityMethod": 1,
-			"levels": 1,
-      "level0": 1
+			"levels": 2,
+			"level0": 2
 		}
 	],
 	"RigidBodies": [

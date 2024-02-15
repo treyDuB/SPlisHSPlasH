@@ -20,6 +20,7 @@ namespace Utilities
 		unsigned char mode;
 		Vector3r initialVelocity;
 		Vector3r initialAngularVelocity;
+		unsigned int level0;
 
 		FluidBlockParameterObject()
 		{
@@ -33,10 +34,11 @@ namespace Utilities
 			scale = Vector3r::Ones();
 			initialVelocity = Vector3r::Zero();
 			initialAngularVelocity = Vector3r::Zero();
+			level0 = 0;
 		}
 
 		FluidBlockParameterObject(std::string id_, std::string visMeshFile_, Vector3r boxMin_, Vector3r boxMax_, unsigned char mode_, Vector3r translation_, Vector3r scale_,
-								Vector3r initialVelocity_, Vector3r initialAngularVelocity_)
+								Vector3r initialVelocity_, Vector3r initialAngularVelocity_, unsigned int level0_ = 0)
 		{
 			// Default values
 			id = id_;
@@ -48,6 +50,7 @@ namespace Utilities
 			mode = mode_;
 			initialVelocity = initialVelocity_;
 			initialAngularVelocity = initialAngularVelocity_;
+			level0 = level0_;
 		}
 
 		static int FLUID_BLOCK_ID;
@@ -59,6 +62,7 @@ namespace Utilities
 		static int FLUID_BLOCK_MODE;
 		static int FLUID_BLOCK_INITIAL_VEL;
 		static int FLUID_BLOCK_INITIAL_ANGVEL;
+		static int FLUID_BLOCK_LEVEL0;
 
 		virtual void initParameters();
 	};
@@ -273,6 +277,8 @@ namespace Utilities
 		bool emitterReuseParticles;
 		Vector3r emitterBoxMin;
 		Vector3r emitterBoxMax;
+		unsigned int levels;
+		unsigned int level0;
 
 		MaterialParameterObject()
 		{
@@ -286,6 +292,8 @@ namespace Utilities
 			emitterReuseParticles = false;
 			emitterBoxMin = Vector3r(-1.0, -1.0, -1.0);
 			emitterBoxMax = Vector3r(1.0, 1.0, 1.0);
+			levels = 0;
+			level0 = 0;
 		}
 
 		MaterialParameterObject(std::string id_, std::string colorField_, unsigned int colorMapType_, Real minVal_, Real maxVal_,
@@ -300,6 +308,24 @@ namespace Utilities
 			emitterReuseParticles = emitterReuseParticles_;
 			emitterBoxMin = emitterBoxMin_;
 			emitterBoxMax = emitterBoxMax_;
+			levels = 0;
+			level0 = 0;
+		}
+
+		MaterialParameterObject(std::string id_, std::string colorField_, unsigned int colorMapType_, Real minVal_, Real maxVal_,
+			unsigned int maxEmitterParticles_, bool emitterReuseParticles_, Vector3r emitterBoxMin_, Vector3r emitterBoxMax_, unsigned int levels_, unsigned int level0_)
+		{
+			id = id_;
+			minVal = minVal_;
+			maxVal = maxVal_;
+			colorField = colorField_;
+			colorMapType = colorMapType_;
+			maxEmitterParticles = maxEmitterParticles_;
+			emitterReuseParticles = emitterReuseParticles_;
+			emitterBoxMin = emitterBoxMin_;
+			emitterBoxMax = emitterBoxMax_;
+			levels = levels_;
+			level0 = level0_;
 		}
 
 		static int MATERIAL_ID;
@@ -311,6 +337,8 @@ namespace Utilities
 		static int MATERIAL_EMITTER_REUSE;
 		static int MATERIAL_EMITTER_BOX_MIN;
 		static int MATERIAL_EMITTER_BOX_MAX;
+		static int MATERIAL_LEVELS;
+		static int MATERIAL_LEVEL_0;
 
 		virtual void initParameters();
 	};

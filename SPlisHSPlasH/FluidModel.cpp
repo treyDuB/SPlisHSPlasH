@@ -247,7 +247,7 @@ void FluidModel::reset()
 
 void FluidModel::initMasses()
 {
-	const Real particleRadius = Simulation::getCurrent()->getParticleRadius();
+	const Real particleRadius = std::pow(2.0, m_level0 /3.0) * Simulation::getCurrent()->getParticleRadius();
 	const int nParticles = (int) numParticles();
 	const Real diam = static_cast<Real>(2.0)*particleRadius;
 	if (Simulation::getCurrent()->is2DSimulation())
@@ -298,12 +298,24 @@ void FluidModel::releaseFluidParticles()
 	m_particleState.clear();
 }
 
-void FluidModel::initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles)
+void FluidModel::initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles, unsigned int levels, unsigned int level0)
 {
 	m_id = id;
+	if (m_id.compare("Fluid1")) {
+		m_level0 = 0;
+		m_levels = 2;
+	} else if (m_id.compare("Fluid2")) {
+		m_level0 = 1; 
+		m_levels = 2;
+	} else {
+		m_levels = levels;
+		m_level0 = level0;
+	}
+	
 	init();
 	releaseFluidParticles();
 	resizeFluidParticles(nFluidParticles + nMaxEmitterParticles);
+	
 
 	// copy fluid positions
 	#pragma omp parallel default(shared)
@@ -431,6 +443,7 @@ void FluidModel::setElasticityMethodChangedCallback(std::function<void()> const&
 {
 	m_elasticityMethodChanged = callBackFct;
 }
+
 
 void FluidModel::computeSurfaceTension()
 {
