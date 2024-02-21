@@ -98,6 +98,21 @@ void SceneLoader::readScene(const char *fileName, Scene &scene)
 	}
 
 	//////////////////////////////////////////////////////////////////////////
+	// read fluid blocks
+	//////////////////////////////////////////////////////////////////////////
+	if (m_jsonData.find("GradientBlocks") != m_jsonData.end())
+	{
+		nlohmann::json gradientBlocks = m_jsonData["GradientBlocks"];
+		for (auto& gradientBlock : gradientBlocks)
+		{
+			GradientBlockParameterObject* block = new GradientBlockParameterObject();
+			block->initParameters();
+			readParameterObject(gradientBlock, block);
+			scene.gradientBlocks.push_back(block);
+		}
+	}
+
+	//////////////////////////////////////////////////////////////////////////
 	// read emitters
 	//////////////////////////////////////////////////////////////////////////
 	if (m_jsonData.find("Emitters") != m_jsonData.end())

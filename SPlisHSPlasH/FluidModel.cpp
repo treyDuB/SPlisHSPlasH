@@ -39,6 +39,8 @@ FluidModel::FluidModel() :
 	m_particleId(),
 	m_objectId(),
 	m_objectId0(),
+	m_r(),
+	m_r0(),
 	m_l(),
 	m_levels(),
 	m_level0(),
@@ -74,6 +76,7 @@ FluidModel::FluidModel() :
 	addField({ "position0", FieldType::Vector3, [&](const unsigned int i) -> Real* { return &getPosition0(i)[0]; } });
 	addField({ "velocity", FieldType::Vector3, [&](const unsigned int i) -> Real* { return &getVelocity(i)[0]; }, true });
 	addField({ "density", FieldType::Scalar, [&](const unsigned int i) -> Real* { return &getDensity(i); }, false });
+	addField({ "radius", FieldType::Scalar, [&](const unsigned int i) -> Real* { return &getRadius(i); }, false });
 	addField({ "levels", FieldType::UInt, [&](const unsigned int i) -> unsigned int* { return &getLevels(); }, true });
 	addField({ "level0", FieldType::UInt, [&](const unsigned int i) -> unsigned int* { return &getLevel0(); }, true });
 }
@@ -87,6 +90,7 @@ FluidModel::~FluidModel(void)
 	removeFieldByName("position0");
 	removeFieldByName("velocity");
 	removeFieldByName("density");
+	removeFieldByName("radius");
 	removeFieldByName("levels");
 	removeFieldByName("level0");
 
@@ -219,6 +223,7 @@ void FluidModel::reset()
 		getVelocity(i) = getVelocity0(i);
 		getAcceleration(i).setZero();
 		m_objectId[i] = m_objectId0[i];
+		m_r[i] = m_r0[i];
 		m_l[i] = m_level0;
 		m_density[i] = 0.0;
 		m_particleId[i] = i;
@@ -260,7 +265,13 @@ void FluidModel::initMasses()
 		#pragma omp for schedule(static)  
 		for (int i = 0; i < nParticles; i++)
 		{
-			setMass(i, m_V * m_density0);						// each particle represents a cube with a side length of r		
+			Real d = static_cast<Real>(2.0) * m_r[i];
+			Real V;
+			if (Simulation::getCurrent()->is2DSimulation())
+				V = static_cast<Real>(0.8) * diam * diam;
+			else
+				V = static_cast<Real>(0.8) * diam * diam * diam;
+			setMass(i, V * m_density0);						// each particle represents a cube with a side length of r		
 																// mass is slightly reduced to prevent pressure at the beginning of the simulation
 		}
 	}
@@ -298,20 +309,20 @@ void FluidModel::releaseFluidParticles()
 	m_particleState.clear();
 }
 
-void FluidModel::initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles, unsigned int levels, unsigned int level0)
+void FluidModel::initModel(const std::string& id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, std::vector<Real> fluidRadius, Real radius0, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles, unsigned int levels, unsigned int level0)
 {
 	m_id = id;
-	if (m_id.compare("Fluid1")) {
+	/*if (m_id.compare("fluid1")) {
 		m_level0 = 0;
 		m_levels = 2;
-	} else if (m_id.compare("Fluid2")) {
+	} else if (m_id.compare("fluid2")) {
 		m_level0 = 1; 
 		m_levels = 2;
 	} else {
-		m_levels = levels;
-		m_level0 = level0;
-	}
-	
+		
+	}*/
+	m_levels = levels;
+	m_level0 = level0;
 	init();
 	releaseFluidParticles();
 	resizeFluidParticles(nFluidParticles + nMaxEmitterParticles);
@@ -330,6 +341,14 @@ void FluidModel::initModel(const std::string &id, const unsigned int nFluidParti
 			getAcceleration(i).setZero();
 			m_density[i] = 0.0;
 			m_particleId[i] = i;
+			if (fluidRadius.size() > i) {
+				m_r[i] = fluidRadius[i];
+				m_r0[i] = fluidRadius[i];
+			}
+			else {
+				m_r[i] = radius0;
+				m_r0[i] = radius0;
+			}
 			m_objectId[i] = fluidObjectIds[i];
 			m_objectId0[i] = fluidObjectIds[i];
 			m_l[i] = m_level0;

@@ -64,6 +64,64 @@ void FluidBlockParameterObject::initParameters()
 }
 
 //////////////////////////////////////////////////////////////////////////
+// GradientBlockParameterObject
+//////////////////////////////////////////////////////////////////////////
+int GradientBlockParameterObject::GRADIENT_BLOCK_ID = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_BOX_MINX = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_BOX_MAXX = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_TRANSLATION = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_SCALE = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_VISMESH = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_MODE = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_INITIAL_VEL = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_INITIAL_ANGVEL = -1;
+int GradientBlockParameterObject::GRADIENT_BLOCK_RADIUS_SCALE = -1;
+
+
+void GradientBlockParameterObject::initParameters()
+{
+	GRADIENT_BLOCK_ID = createStringParameter("id", "ID", &id);
+	setGroup(GRADIENT_BLOCK_ID, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_ID, "This id is used to define the properties of the gradient fluid block. If no id is defined, then the standard id \"Fluid\" is used.");
+
+	GRADIENT_BLOCK_BOX_MINX = createVectorParameter("start", "Start", 3u, boxMin.data());
+	setGroup(GRADIENT_BLOCK_BOX_MINX, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_BOX_MINX, "Minimum coordinate of the box which defines the gradient fluid block.");
+
+	GRADIENT_BLOCK_BOX_MAXX = createVectorParameter("end", "End", 3u, boxMax.data());
+	setGroup(GRADIENT_BLOCK_BOX_MAXX, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_BOX_MAXX, "Maximum coordinate of the box which defines the gradient fluid block.");
+
+	GRADIENT_BLOCK_TRANSLATION = createVectorParameter("translation", "Translation", 3u, translation.data());
+	setGroup(GRADIENT_BLOCK_TRANSLATION, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_TRANSLATION, "Translation vector of the block.");
+
+	GRADIENT_BLOCK_SCALE = createVectorParameter("scale", "Scale", 3u, scale.data());
+	setGroup(GRADIENT_BLOCK_SCALE, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_SCALE, "Scaling vector of the gradient fluid block.");
+
+	GRADIENT_BLOCK_VISMESH = createStringParameter("visMesh", "Visualization mesh", &visMeshFile);
+	setGroup(GRADIENT_BLOCK_VISMESH, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_VISMESH, "Path of an OBJ/PLY file containing a high resolution mesh which is used by the tool MeshSkinning to generate a sequence of deformed meshes (more info about this can be found in the documentation of the tool).");
+
+	GRADIENT_BLOCK_MODE = createNumericParameter<unsigned char>("denseMode", "Dense mode", &mode);
+	setGroup(GRADIENT_BLOCK_MODE, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_MODE, "Sampling mode: 0: regular sampling, 1: more dense sampling, 2 : dense sampling");
+
+	GRADIENT_BLOCK_INITIAL_VEL = createVectorParameter("initialVelocity", "Initial velocity", 3u, initialVelocity.data());
+	setGroup(GRADIENT_BLOCK_INITIAL_VEL, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_INITIAL_VEL, "The initial velocity is set for all particles in the block.");
+
+	GRADIENT_BLOCK_INITIAL_ANGVEL = createVectorParameter("initialAngularVelocity", "Initial angular velocity", 3u, initialAngularVelocity.data());
+	setGroup(GRADIENT_BLOCK_INITIAL_ANGVEL, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_INITIAL_ANGVEL, "The initial angular velocity of the block.");
+
+	GRADIENT_BLOCK_RADIUS_SCALE = createNumericParameter<Real>("radiusScale", "Radius Scale value", &radiusScale);
+	setGroup(GRADIENT_BLOCK_RADIUS_SCALE, "GradientBlock");
+	setDescription(GRADIENT_BLOCK_RADIUS_SCALE, "The value by which a radius can be scaled from the scene's particle radius");
+}
+
+//////////////////////////////////////////////////////////////////////////
 // FluidModelParameterObject
 //////////////////////////////////////////////////////////////////////////
 int FluidModelParameterObject::FLUID_MODEL_ID = -1;

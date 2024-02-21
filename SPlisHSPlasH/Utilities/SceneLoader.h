@@ -25,6 +25,7 @@ namespace Utilities
 			std::vector<BoundaryParameterObject*> boundaryModels;
 			std::vector<FluidModelParameterObject*> fluidModels;
 			std::vector<FluidBlockParameterObject*> fluidBlocks;
+			std::vector<GradientBlockParameterObject*> gradientBlocks;
 			std::vector<EmitterParameterObject*> emitters;
 			std::vector<AnimationFieldParameterObject*> animatedFields;
 			std::vector<MaterialParameterObject*> materials;

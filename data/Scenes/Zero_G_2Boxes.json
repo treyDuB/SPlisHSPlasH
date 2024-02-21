@@ -24,22 +24,23 @@
 	"Materials": [
 		{
 			"id": "Fluid1",
-			"colorField": "velocity",
+			"colorField": "object_id",
 			"surfaceTension": 0.2,
 			"surfaceTensionMethod": 0,
 			"viscosity": 0.01,
 			"viscosityMethod": 1,
 			"levels": 1,
-      "level0": 0
+			"level0": 0
 		},
 		{
 			"id": "Fluid2",
+			"colorField": "object_id",
 			"surfaceTension": 0.2,
 			"surfaceTensionMethod": 0,
 			"viscosity": 0.01,
 			"viscosityMethod": 1,
 			"levels": 1,
-      "level0": 1
+			"level0": 1
 		}
 	],
 	"RigidBodies": [
@@ -59,20 +60,24 @@
 	],
 	"FluidBlocks": [
 		{
-      "id": "Fluid1",
+			"id": "Fluid1",
 			"denseMode": 0,
-			"start": [-0.5, 0.0, -0.5],
-			"end": [0.5, 1.0, 0.5],
-			"translation": [-1.25, 0.50, 0.0],
-			"scale": [1, 1, 1]
+			"start": [ -0.5, 0.0, -0.5 ],
+			"end": [ 0.5, 1.0, 0.5 ],
+			"translation": [ -1.25, 0.50, 0.0 ],
+			"scale": [ 1, 1, 1 ],
+			"level0": 1,
+			"initialVelocity": [ 1.0,0,0]
 		},
 		{
-			"id": "Fluid2",
+			"id": "Fluid2", 
 			"denseMode": 0,
-			"start": [-0.5, 0.0, -0.5],
-			"end": [0.5, 1.0, 0.5],
-			"translation": [1.25, 0.50, 0.0],
-			"scale": [1, 1, 1]
+			"start": [ -0.5, 0.0, -0.5 ],
+			"end": [ 0.5, 1.0, 0.5 ],
+			"translation": [ 1.25, 0.50, 0.0 ],
+			"scale": [ 1, 1, 1 ],
+			"level0": 0,
+			"initialVelocity":  [-1.0,0 , 0]
 		}
 	]	
 }

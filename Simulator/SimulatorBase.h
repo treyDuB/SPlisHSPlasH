@@ -97,7 +97,8 @@ namespace SPH
 
 		void initFluidData();
 		void setInitialVelocity(const Vector3r &vel, const Vector3r & angVel, const unsigned int numParticles, Vector3r *fluidParticles, Vector3r *fluidVelocities);
-		void createFluidBlocks(std::map<std::string, unsigned int> &fluidIDs, std::vector<std::vector<Vector3r>> &fluidParticles, std::vector<std::vector<Vector3r>> &fluidVelocities, std::vector<std::vector<unsigned int>> &fluidObjectIds);
+		void createFluidBlocks(std::map<std::string, unsigned int> &fluidIDs, std::vector<std::vector<Vector3r>> &fluidParticles, std::vector<std::vector<Vector3r>> &fluidVelocities, std::vector<std::vector<Real>>& fluidRadius, std::vector<std::vector<unsigned int>> &fluidObjectIds);
+		void createGradientBlocks(std::map<std::string, unsigned int>& fluidIDs, std::vector<std::vector<Vector3r>>& fluidParticles, std::vector<std::vector<Vector3r>>& fluidVelocities, std::vector<std::vector<Real>>& fluidRadius, std::vector<std::vector<unsigned int>>& fluidObjectIds);
 		void createEmitters();
 		void createAnimationFields();
 		void buildModel();

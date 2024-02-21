@@ -1,25 +1,25 @@
 {
-	"Configuration": 
-	{
+	"Configuration": {
 		"particleRadius": 0.025,
 		"numberOfStepsPerRenderUpdate": 4,
-		"density0": 1000, 
+		"density0": 1000,
 		"simulationMethod": 2,
-		"gravitation": [0,-9.81,0], 
+		"gravitation": [ 0, -9.81, 0 ],
 		"timeStepSize": 0.005,
-		"cflMethod": 1, 
+		"cflMethod": 1,
 		"cflFactor": 1,
 		"cflMaxTimeStepSize": 0.005,
 		"maxIterations": 100,
 		"maxError": 0.05,
 		"maxIterationsV": 100,
-		"maxErrorV": 0.1,		
+		"maxErrorV": 0.1,
 		"stiffness": 50000,
 		"exponent": 7,
 		"velocityUpdateMethod": 0,
 		"enableDivergenceSolver": true,
 		"particleAttributes": "density;velocity",
-		"boundaryHandlingMethod": 2
+		"boundaryHandlingMethod": 2,
+		"enableStateExport" :  true
 	},
 	"Materials": [
 		{
@@ -40,7 +40,7 @@
 			"viscosity": 0.01,
 			"viscosityMethod": 1,
 			"levels": 2,
-			"level0": 2
+			"level0": 1
 		}
 	],
 	"RigidBodies": [
@@ -65,7 +65,8 @@
 			"start": [-0.5, 0.0, -0.5],
 			"end": [0.5, 1.0, 0.5],
 			"translation": [-1.25, 0.50, 0.0],
-			"scale": [1, 1, 1]
+			"scale": [ 1, 1, 1 ],
+			"level0" :  1
 		},
 		{
 			"id": "Fluid2",
@@ -73,7 +74,8 @@
 			"start": [-0.5, 0.0, -0.5],
 			"end": [0.5, 1.0, 0.5],
 			"translation": [1.25, 0.50, 0.0],
-			"scale": [1, 1, 1]
+			"scale": [ 1, 1, 1 ],
+			"level0": 0
 		}
 	]	
 }

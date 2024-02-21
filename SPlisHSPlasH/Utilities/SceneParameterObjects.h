@@ -67,6 +67,65 @@ namespace Utilities
 		virtual void initParameters();
 	};
 
+	class GradientBlockParameterObject : public GenParam::ParameterObject
+	{
+	public:
+		std::string id;
+		Vector3r boxMin;
+		Vector3r boxMax;
+		Vector3r translation;
+		Vector3r scale;
+		std::string visMeshFile;
+		unsigned char mode;
+		Vector3r initialVelocity;
+		Vector3r initialAngularVelocity;
+		Real radiusScale;
+
+		GradientBlockParameterObject()
+		{
+			// Default values
+			id = "Fluid";
+			visMeshFile = "";
+			boxMin = Vector3r::Zero();
+			boxMax = Vector3r::Zero();
+			mode = 0;
+			translation = Vector3r::Zero();
+			scale = Vector3r::Ones();
+			initialVelocity = Vector3r::Zero();
+			initialAngularVelocity = Vector3r::Zero();
+			radiusScale = 1.0;
+		}
+
+		GradientBlockParameterObject(std::string id_, std::string visMeshFile_, Vector3r boxMin_, Vector3r boxMax_, unsigned char mode_, Vector3r translation_, Vector3r scale_,
+			Vector3r initialVelocity_, Vector3r initialAngularVelocity_, Real rScale = 1.0)
+		{
+			// Default values
+			id = id_;
+			boxMin = boxMin_;
+			boxMax = boxMax_;
+			translation = translation_;
+			scale = scale_;
+			visMeshFile = visMeshFile_;
+			mode = mode_;
+			initialVelocity = initialVelocity_;
+			initialAngularVelocity = initialAngularVelocity_;
+			radiusScale = rScale;
+		}
+
+		static int GRADIENT_BLOCK_ID;
+		static int GRADIENT_BLOCK_BOX_MINX;
+		static int GRADIENT_BLOCK_BOX_MAXX;
+		static int GRADIENT_BLOCK_TRANSLATION;
+		static int GRADIENT_BLOCK_SCALE;
+		static int GRADIENT_BLOCK_VISMESH;
+		static int GRADIENT_BLOCK_MODE;
+		static int GRADIENT_BLOCK_INITIAL_VEL;
+		static int GRADIENT_BLOCK_INITIAL_ANGVEL;
+		static int GRADIENT_BLOCK_RADIUS_SCALE;
+
+		virtual void initParameters();
+	};
+
 	class FluidModelParameterObject : public GenParam::ParameterObject
 	{
 	public:

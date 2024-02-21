@@ -122,6 +122,8 @@ namespace SPH
 			std::vector<unsigned int> m_l;			//level
 			std::vector<ParticleState> m_particleState;
 			Real m_V;
+			std::vector<Real> m_r0;
+			std::vector<Real> m_r;
 			unsigned int m_levels; // might need to make a public variable and process at init
 			unsigned int m_level0;
 			
@@ -194,7 +196,7 @@ namespace SPH
 
 			void performNeighborhoodSearchSort();
 
-			void initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles, unsigned int levels = 0, unsigned int level0 = 0);
+			void initModel(const std::string &id, const unsigned int nFluidParticles, Vector3r* fluidParticles, Vector3r* fluidVelocities, std::vector<Real> fluidRadius, Real radius0, unsigned int* fluidObjectIds, const unsigned int nMaxEmitterParticles, unsigned int levels = 0, unsigned int level0 = 0);
 			
 			const unsigned int numParticles() const { return static_cast<unsigned int>(m_masses.size()); }
 			unsigned int numActiveParticles() const;
@@ -380,6 +382,35 @@ namespace SPH
 				m_objectId[i] = val;
 			}
 
+			FORCE_INLINE const Real getRadius(const unsigned int i) const
+			{
+				return m_r[i];
+			}
+
+			FORCE_INLINE Real& getRadius(const unsigned int i)
+			{
+				return m_r[i];
+			}
+
+			FORCE_INLINE void setRadius(const unsigned int i, const Real radius)
+			{
+				m_r[i] = radius;
+			}
+
+			FORCE_INLINE const Real getRadius0(const unsigned int i = 0) const
+			{
+				return m_r0[i];
+			}
+
+			FORCE_INLINE Real& getRadius0(const unsigned int i = 0)
+			{
+				return m_r0[i];
+			}
+
+			FORCE_INLINE void setRadius0(const unsigned int i, const Real radius)
+			{
+				m_r0[i] = radius;
+			}
 			FORCE_INLINE const unsigned int& getParticleLevel(const unsigned int i) const
 			{
 				return m_l[i];
@@ -435,7 +466,9 @@ namespace SPH
 
 			FORCE_INLINE const Real getVolume(const unsigned int i) const
 			{
-				return m_V;
+				const Real diam = static_cast<Real>(2.0) * m_r[i];
+				Real V = static_cast<Real>(0.8) * diam * diam * diam;
+				return V;
 			}
 
 			FORCE_INLINE Real& getVolume(const unsigned int i)
